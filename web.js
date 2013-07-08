@@ -5,7 +5,7 @@ var INDEX='index.html';
 
 var app = express.createServer(express.logger());
 
-var fileContent = fs.readFileSync(INDEX);
+var fileContent = fs.readFileSync(INDEX).toString();
 
 app.get('/', function(request, response) {
   response.send(fileContent);
