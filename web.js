@@ -5,13 +5,12 @@ var INDEX='index.html';
 
 var app = express.createServer(express.logger());
 
-var fileContent = fs.readFileSync(INDEX).toString();
-
 app.get('/', function(request, response) {
+  var fileContent = fs.readFileSync(INDEX).toString();
   response.send(fileContent);
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
