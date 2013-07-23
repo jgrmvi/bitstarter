@@ -30,7 +30,7 @@
         var position = new google.maps.LatLng(-33.865997,151.207210);
         var title = 'stop 1';
         var shape = {coords: [0,0,50,50], type: "rect"};
-        var comment = "Turn right at the Hunter street and you will find a great steak house called Rockpool Bar & Grill at the next corner";
+        var comment = "Turn right at the Hunter street and you will find a great steak house called Rockpool Bar and Grill at the next corner";
       <!-- End -->
         var marker = new google.maps.Marker({
           position: position,
@@ -40,7 +40,7 @@
         });
 
         google.maps.event.addListener(marker, 'click', function() {
-          sayText(comment,1,1,1,'S',-2);
+          sayText(comment,4,1,3);
         });
       }
       function vw_apiLoaded() {
