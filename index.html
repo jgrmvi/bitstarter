@@ -16,15 +16,16 @@
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8,
+          center: new google.maps.LatLng(-33.865, 151.207),
+          zoom: 13,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
       <!-- from database -->
         var position = new google.maps.LatLng(-33.865997,151.207210);
         var title = 'stop 1';
-       var shape = {coords: [0,0,50,50], type: "rect"};
+        var shape = {coords: [0,0,50,50], type: "rect"};
+        var comment = "Turn right at the Hunter street and you will find a great steak house called Rockpool Bar & Grill at the next corner";
       <!-- End -->
         var marker = new google.maps.Marker({
           position: position,
@@ -34,7 +35,7 @@
         });
 
         google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(marker.get('map'), marker);
+          sayText(comment);
         });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
