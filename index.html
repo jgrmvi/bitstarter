@@ -40,11 +40,12 @@
         });
 
         google.maps.event.addListener(marker, 'click', function() {
-          sayText(comment);
+          sayText("working");
         });
       }
       function vw_apiLoaded() {
         setPlayerVolume(10);
+        sayText("Ok");
         initialize();
       }
 
