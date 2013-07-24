@@ -36,7 +36,6 @@
           position: position,
           map: map,
           title: title,
-          shape: shape
         });
 
         google.maps.event.addListener(marker, 'click', function() {
@@ -86,10 +85,21 @@
       body{
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
+      #container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+      }
+      #dummy {
+        padding-top: 66.66%;
+
+      }
       #map-canvas {
-        display: block;
-        width: 480px;
-        height: 300px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
       .heading, .subheading {
         font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
@@ -189,7 +199,11 @@
         </div>
       </div>
       <div class="row-fluid">
-	<div class="span5 offset1" id="map-canvas">
+	<div class="span5 offset1">
+	  <div id="container">
+	    <div id="dummy"></div>
+	    <div id="map-canvas"></div>
+	  </div>
 	</div>
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
